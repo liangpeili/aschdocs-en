@@ -1,21 +1,22 @@
 ## Recommand Configuration
 
 OS ： Ubuntu 16.06 x64
+
 Node.js version： 8.x.x
 
 ## Install dependencies
 
-1. Update software
+### 1. Update software
 ```
 apt update 
 apt upgrade
 ```
-2. Install dependencies
+### 2. Install dependencies
 ```
 apt install curl sqlite3 ntp wget git libssl-dev openssl make gcc g++ autoconf automake python build-essential -y
 apt install libtool libtool-bin -y
 ```
-3. Install node.js
+### 3. Install node.js
 ```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
@@ -26,21 +27,21 @@ nvm install 8
 ```
 
 ## Intall Asch
-1. Clone the source code from github
+### 1. Clone the source code from github
 ```
 git clone https://github.com/AschPlatform/asch && cd asch && chmod u+x aschd
 ```
-2. Install dependencies
+### 2. Install dependencies
 ```
 npm install
 ```
 If installation fails, delete the folder `node_modules` and  try again.
-3. Start aschd
+### 3. Start aschd
 ```
 ./aschd start 
 ```
 Use 'netstat -nltp' to check if the port 4096 is open.
-4. Access frontend
+### 4. Access frontend
 Type http://your-ip:4096 in your browser，it should response blow infomation：
 ```
 {
@@ -51,13 +52,13 @@ Type http://your-ip:4096 in your browser，it should response blow infomation：
 
 ## Build wallet frontend
 
-1. Install dependencies
+### 1. Install dependencies
 ```
 npm install -g bower
 npm install -g gulp
 npm install browserify -g
 ```
-2. Build wallet frontend
+### 2. Build wallet frontend
 The frontend source code is in the asch/public folder.
 ```
 cd you-path-to-asch/public
@@ -65,7 +66,7 @@ npm install
 npm run build
 gulp build-test
 ```
-3. Login from the frontend
+### 3. Login from the frontend
 Login from http://your-ip:4096， it should be the same wallet frontend as the mainnet.
 
 ## Accounts and delegates
